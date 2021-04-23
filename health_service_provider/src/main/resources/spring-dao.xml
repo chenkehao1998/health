@@ -28,7 +28,8 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="configLocation" value="classpath:SqlMapConfig.xml" />
-    </bean>
+        <property name="typeAliasesPackage" value="com.kehao.pojo"/>
+     </bean>
     <!--批量扫描接口生成代理对象-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--指定接口所在的包-->
